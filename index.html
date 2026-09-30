@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Piremi P - Intern Software Engineer / Intern Fullstack Developer portfolio">
+<title>Piremi P | Software Engineer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--bg2:#0b1729;--card:rgba(15,29,49,.72);--text:#f8fafc;--muted:#9fb0c5;--line:rgba(255,255,255,.10);--a:#60a5fa;--b:#a78bfa;--accent:#38bdf8;--shadow:0 24px 80px rgba(0,0,0,.28)}
+body.light{--bg:#f5f8fc;--bg2:#eef4fb;--card:rgba(255,255,255,.78);--text:#102033;--muted:#5e7087;--line:rgba(16,32,51,.11);--a:#2563eb;--b:#7c3aed;--accent:#0284c7;--shadow:0 20px 60px rgba(16,32,51,.10)}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 10% 10%,rgba(96,165,250,.12),transparent 30%),radial-gradient(circle at 90% 20%,rgba(167,139,250,.12),transparent 30%),var(--bg);color:var(--text);transition:.3s;line-height:1.65}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,90%);margin:auto}
+nav{position:fixed;z-index:1000;top:0;left:0;width:100%;padding:16px 0;background:rgba(7,17,31,.68);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+body.light nav{background:rgba(245,248,252,.72)}
+.nav{display:flex;align-items:center;justify-content:space-between}.logo{font-size:24px;font-weight:800}.logo span{color:var(--accent)}
+.links{display:flex;gap:24px;list-style:none}.links a{font-size:13px;color:var(--muted);transition:.2s}.links a:hover{color:var(--text)}
+.actions{display:flex;gap:8px}.icon{width:40px;height:40px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:50%;cursor:pointer}.menu{display:none}
+section{padding:105px 0}.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;padding-top:110px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);padding:8px 13px;border-radius:999px;font-size:12px;color:var(--muted);margin-bottom:22px}.dot{width:7px;height:7px;background:#22c55e;border-radius:50%;box-shadow:0 0 12px #22c55e}
+h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-3px}.gradient{background:linear-gradient(100deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent}
+.hero h2{font-size:22px;color:var(--muted);margin:20px 0}.hero p{max-width:700px;color:var(--muted);margin-bottom:30px}.buttons{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:11px;border:1px solid var(--line);font-size:13px;font-weight:700;background:var(--card);transition:.25s}.btn:hover{transform:translateY(-3px)}.primary{border:0;color:white;background:linear-gradient(135deg,var(--a),var(--b))}
+.profile{display:flex;justify-content:center;position:relative}.ring{width:340px;height:340px;border-radius:50%;padding:7px;background:conic-gradient(from 30deg,var(--a),var(--b),var(--accent),var(--a));animation:float 4s ease-in-out infinite;box-shadow:0 0 70px rgba(96,165,250,.15)}.ring img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:7px solid var(--bg)}@keyframes float{50%{transform:translateY(-14px)}}
+.section-head{text-align:center;margin-bottom:52px}.section-head small{color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.section-head h2{font-size:40px;line-height:1.1;margin-top:7px}.section-head p{color:var(--muted);margin-top:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.glass{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}.glass p{color:var(--muted);margin:10px 0}.facts{list-style:none}.facts li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}.facts span{color:var(--muted)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:24px}.skill{margin:20px 0}.skilltop{display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px}.skilltop b{color:var(--accent)}.bar{height:9px;background:rgba(148,163,184,.16);border-radius:99px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--a),var(--b));border-radius:99px;transition:1.5s ease}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.project{overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);transition:.3s}.project:hover{transform:translateY(-8px)}.project-img{height:205px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#102846,#171f3c);font-size:58px}.project:nth-child(2) .project-img{background:linear-gradient(135deg,#17342c,#17283e)}.project:nth-child(3) .project-img{background:linear-gradient(135deg,#291b43,#142a43)}.project-body{padding:23px}.project-body h3{margin-bottom:8px}.project-body p{color:var(--muted);font-size:13px;margin-bottom:15px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;color:var(--accent);border:1px solid var(--line);padding:5px 8px;border-radius:999px}
+.timeline{max-width:850px;margin:auto}.item{padding:24px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 18px 18px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:18px}.item small{color:var(--accent);font-weight:700}.item p{color:var(--muted);font-size:13px;margin-top:8px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}.contact-info p{color:var(--muted);margin:12px 0}.socials{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}.social{padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:12px;font-weight:700;transition:.2s}.social:hover{background:var(--a);color:white}
+form{display:grid;gap:13px}input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.03);color:var(--text);outline:0;font:inherit}textarea{min-height:145px;resize:vertical}input:focus,textarea:focus{border-color:var(--accent)}#formStatus{font-size:12px;color:var(--accent);min-height:20px}
+footer{padding:28px 0;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){.hero,.grid2,.contact{grid-template-columns:1fr}.profile{order:-1}.projects{grid-template-columns:1fr 1fr}.ring{width:280px;height:280px}.skills{grid-template-columns:1fr}}
+@media(max-width:700px){.links{display:none;position:absolute;top:72px;left:5%;width:90%;padding:20px;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(18px)}.links.open{display:flex}.menu{display:block}.projects{grid-template-columns:1fr}section{padding:85px 0}h1{letter-spacing:-2px}.section-head h2{font-size:32px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav">
+<a class="logo" href="#home">Piremila<span></span></a>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<div class="actions">
+<button class="icon" id="theme" aria-label="Toggle theme">☀️</button>
+<button class="icon menu" id="menu" aria-label="Open menu">☰</button>
+</div>
+</div>
+</nav>
+
+<main>
+<section id="home">
+<div class="container hero">
+<div class="reveal">
+
+<h1>Hi, I'm <span class="gradient">PIREMILA</span></h1>
+<h2><span id="typing"></span></h2>
+<p>HNDIT student with hands-on full-stack development experience in PHP, Laravel and MySQL. I enjoy building practical web applications, working with APIs and exploring AI-powered solutions.</p>
+<div class="buttons">
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn" href="cv.pdf" download> View CV</a>
+<a class="btn" href="https://www.linkedin.com/public-profile/settings/" target="_blank" rel="noopener">in LinkedIn</a>
+<a class="btn" href="https://github.com/piremila" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="profile reveal"><div class="ring"><img src="1.jpeg" alt="Piremi P profile photo width="300" height="300""></div></div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="section-head reveal"><small>About me</small><h2>Building with purpose.</h2><p>Software development, full-stack web applications and practical problem solving.</p></div>
+<div class="grid2">
+<div class="glass reveal">
+<h3>Professional Summary</h3>
+<p>HNDIT student at SLIATE with hands-on full-stack development experience in PHP, Laravel and MySQL, gained through building complex solo projects involving real-time systems, APIs and AI integration.</p>
+<p>Currently seeking a 6-month internship in Software Engineering / Fullstack Development to apply and grow these skills in a professional environment.</p>
+</div>
+<div class="glass reveal">
+<h3>Quick Facts</h3>
+<ul class="facts">
+<li><span>Focus</span><b>Software / Fullstack</b></li>
+<li><span>Location</span><b>Trincomalee, Sri Lanka</b></li>
+<li><span>Email</span><b>piremipiremila221@gmail.com</b></li>
+<li><span>Phone</span><b>+94 74 050 4960</b></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<div class="section-head reveal"><small>Skills</small><h2>Technical toolkit.</h2><p>Technologies listed from the supplied CV.</p></div>
+<div class="skills">
+<div class="glass reveal">
+<div class="skill"><div class="skilltop"><span>HTML / CSS</span><b>90%</b></div><div class="bar"><i data-w="90%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>JavaScript</span><b>75%</b></div><div class="bar"><i data-w="75%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>PHP / Laravel</span><b>78%</b></div><div class="bar"><i data-w="78%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>MySQL</span><b>80%</b></div><div class="bar"><i data-w="80%"></i></div></div>
+</div>
+<div class="glass reveal">
+<div class="skill"><div class="skilltop"><span>Blade / Bootstrap</span><b>78%</b></div><div class="bar"><i data-w="78%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>Git / GitHub</span><b>72%</b></div><div class="bar"><i data-w="72%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>Problem Solving</span><b>85%</b></div><div class="bar"><i data-w="85%"></i></div></div>
+<div class="skill"><div class="skilltop"><span>Teamwork</span><b>85%</b></div><div class="bar"><i data-w="85%"></i></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="section-head reveal"><small>Projects</small><h2>Selected work.</h2><p>Three projects highlighted from the supplied CV.</p></div>
+<div class="projects">
+<article class="project reveal">
+<div class="profile reveal"><div class="square"><img src="3.png" alt="Piremi P profile photo width="300" height="300"></div></div>
+<div class="project-body"><h3>R.K Fresh Flowers</h3><p>Multi-page static online flower shop with product catalogue, reviews, order workflow, search interface and responsive UI.</p><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></div>
+</article>
+<article class="project reveal">
+<div class="profile reveal"><div class="square"><img src="4.png" alt="Piremi P profile photo width="300" height="300"></div></div>
+<div class="project-body"><h3>MediCare Connect</h3><p>Hospital management web application with OPD appointment booking, blood-bank donor CRUD, feedback, contact modules, maps and secure admin features.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div></div>
+</article>
+<article class="project reveal">
+<div class="profile reveal"><div class="square"><img src="2.png" alt="Piremi P profile photo width="300" height="300"></div></div>
+<div class="project-body"><h3>FISHFOLIA</h3><p>AI-driven fisheries marketplace and fish-price prediction platform using Laravel, Python Flask, MySQL, weather data and AI integrations.</p><div class="tags"><span class="tag">Laravel 12</span><span class="tag">Python Flask</span><span class="tag">MySQL</span><span class="tag">OpenWeather</span><span class="tag">AI</span></div></div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+<div class="section-head reveal"><small>Education & certifications</small><h2>Learning journey.</h2></div>
+<div class="timeline">
+<div class="item reveal"><small>Higher National Diploma</small><h3>HNDIT — SLIATE</h3><p>Higher National Diploma in Information Technology. The supplied CV describes this as in progress.</p></div>
+<div class="item reveal"><small>NVQ 4 — 2022</small><h3>Information Communication Technology Technician</h3><p>Youth Service Training Center Course Center.</p></div>
+<div class="item reveal"><small>NVQ 3 — 2021</small><h3>Computer Application Assistant</h3><p>Technology (iLEAND Course Center).</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head reveal"><small>Contact</small><h2>Let's connect.</h2><p>For internship, software engineering or full-stack opportunities.</p></div>
+<div class="contact">
+<div class="glass reveal">
+<h3>Contact details</h3>
+<p>📧 piremipiremila221@gmail.com</p>
+<p>📱 +94 74 050 4960</p>
+<p>📍 Trincomalee, Sri Lanka</p>
+<div class="socials">
+<a class="social" href="https://www.linkedin.com/in/pakkiyaraja-piremila-721ab7390/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="social" href="https://github.com/piremila" target="_blank" rel="noopener">GitHub</a>
+<a class="social" href="mailto:piremipiremila221@gmail.com">Email me</a>
+</div>
+</div>
+<div class="glass reveal">
+<form id="contactForm">
+<input name="name" placeholder="Your name" required>
+<input type="email" name="email" placeholder="Your email" required>
+<input name="subject" placeholder="Subject" required>
+<textarea name="message" placeholder="Your message" required></textarea>
+<button class="btn primary" type="submit">Send message </button>
+<div id="formStatus"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Piremi P · Software Engineer / Fullstack Developer Portfolio</footer>
+
+<script>
+const body=document.body, theme=document.getElementById('theme');
+if(localStorage.getItem('theme')==='light'){body.classList.add('light');theme.textContent='🌙'}
+theme.onclick=()=>{body.classList.toggle('light');const light=body.classList.contains('light');theme.textContent=light?'🌙':'☀️';localStorage.setItem('theme',light?'light':'dark')};
+
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+const words=['Software Engineer','Fullstack Developer','Laravel Developer','Web Developer'];
+let wi=0,ci=0,del=false;
+function type(){const w=words[wi];document.getElementById('typing').textContent=w.slice(0,ci);if(!del){ci++;if(ci>w.length){del=true;setTimeout(type,1000);return}}else{ci--;if(ci<0){ci=0;del=false;wi=(wi+1)%words.length}}setTimeout(type,del?45:80)} type();
+
+const reveal=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>reveal.observe(x));
+
+const bars=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.bar i').forEach(i=>i.style.width=i.dataset.w)}),{threshold:.25});
+document.querySelectorAll('.skills .glass').forEach(x=>bars.observe(x));
+
+/* Static-site fallback contact form.
+   Replace CONTACT_ENDPOINT below with your Formspree endpoint to receive messages. */
+const CONTACT_ENDPOINT='YOUR_FORMSPREE_ENDPOINT';
+document.getElementById('contactForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const status=document.getElementById('formStatus');
+ if(CONTACT_ENDPOINT==='YOUR_FORMSPREE_ENDPOINT'){
+   const data=new FormData(e.target);
+   const subject=encodeURIComponent(data.get('subject'));
+   const body=encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`);
+   window.location.href=`mailto:piremipiremila221@gmail.com?subject=${subject}&body=${body}`;
+   status.textContent='Opening your email app…';
+   return;
+ }
+ status.textContent='Sending…';
+ try{
+   const r=await fetch(CONTACT_ENDPOINT,{method:'POST',body:new FormData(e.target),headers:{Accept:'application/json'}});
+   if(r.ok){e.target.reset();status.textContent='Message sent successfully!';}
+   else status.textContent='Could not send. Please try again.';
+ }catch(err){status.textContent='Network error. Please email me directly.'}
+});
+</script>
+</body>
+</html>
